@@ -39,12 +39,17 @@
   margin-bottom: 10px; }
   .caja-detalle-producto .caja-detalle-producto-interior {
     padding: 20px;
-    border: 1px solid gray; }
+    border: 1px solid gray;
+  font-size: 1.3em;
+  color: #000050;
+}
 
 .footer {
   margin-top: 8em;
-  background-color: #0d6efd;
+  background-color: salmon;
   padding-top: 0.8em; }
   .footer p {
     color: white;
     font-size: 0.8em; }
+
+    .

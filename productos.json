@@ -1,0 +1,30 @@
+[{
+    "precio": 540,
+    "id": 1,
+    "tittle": "Reme Alf",
+    "thumnailUrl": "https://picsum.photos/id/0/600"
+    
+
+},
+{
+    "precio": 820,
+    "id": 2,
+    "tittle": "Reme Bazooka",
+    "thumnailUrl": "https://picsum.photos/id/10/600"
+},
+{
+    "precio": 620,
+    "id": 3,
+    "tittle": "Reme Britney",
+    "thumnailUrl": "https://picsum.photos/id/20/600"
+},
+{
+"precio": 520,
+"id": 3,
+"tittle": "Reme Jorgito",
+"thumnailUrl": "https://picsum.photos/id/20/600"},
+{
+"precio": 560,
+"id": 3,
+"tittle": "Reme Capitan",
+"thumnailUrl": "https://picsum.photos/id/20/600"}]

@@ -17,7 +17,9 @@ if (localStorage.getItem("carrito") != null) {
     <a href="#" onclick='borrarUnProducto(${JSON.stringify(carrito[i])})'>Eliminar</a>
     </div>
     <div class="col-2">
-    <p>$${carrito[i].precio}</p>
+    <p>PRECIO $${carrito[i].precio}</p>
+    <p> DETALLE PRODUCTO ${carrito[i].detalle}</p>
+    <p> TALLE ${carrito[i].talle}</p>
     </div>
     </div>
     </div>`
@@ -37,7 +39,7 @@ let subtotalCarritoDetalle=`<div class="row carrito">
 <p>Subtotal</p>
 </div>
 <div class="col-3">
-<p>${subtotalCarrito}</p>
+<p>$${subtotalCarrito}</p>
 </div>
 </div>
 `
@@ -47,7 +49,7 @@ let carritoTotalDetalle=`<div class="row">
 <p>Total</p>
 </div>
 <div class="col-3">
-<p id="total-actualizado">${carritoTotal+=subtotalCarrito}</p>
+<p id="total-actualizado">$${carritoTotal+=subtotalCarrito}</p>
 </div>
 </div>`
 
@@ -55,53 +57,7 @@ document.getElementById("carrito-total").innerHTML = subtotalCarritoDetalle;
 document.getElementById("carrito-final").innerHTML = carritoTotalDetalle;
 
 
-/*FUNCION PARA SUMAR CODIGO POSTAL*/
-// function costoEnvio(){
-//   let monto=300;
-//   let x = document.getElementById("costo-envio-input").value;
-//   let option=["1801","1802","1803","1804","1805"];
-//   if(option.includes(x)==true){
-//     let aux=`<div class="row">
-//     <div class="col-9">
-//     <p>Envio desde</p>
-//     </div>
-//     <div class="col-3">
-//     <p>${monto}</p>
-//     </div>
-//     </div>`
-//     document.getElementById("costoEnvio").innerHTML = aux;
-//     carritoTotal=parseInt(carritoTotal)+monto;
-//     document.getElementById("total-actualizado").innerHTML = carritoTotal;
-//   }else{
-//     let m=`<div class="alert alert-danger alert-dismissible fade show" role="alert">
-//     <strong>El dato ingresado no es correcto(*).</strong>
-//     <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-//       <span aria-hidden="true">&times;</span>
-//     </button>
-//   </div>`
-//     document.getElementById("notificacion-costo-input").innerHTML =m;
-//   }
-// }
 
-
-/*ENVETOS MENSAJES DE NOTIFICACION*/
-
-
-
-// function mensajeCostoOver(){
-//   let mensajePromocion=`<div class="alert alert-success" role="alert">
-//   <strong>Los codigos postales son de 1801 a 1805.</strong>
-// </div>`
-//   document.getElementById("notificacion-costo").innerHTML = mensajePromocion;
-// }
-// function mensajeCostoOut(){
-//   let mensajePromocion=``
-//   document.getElementById("notificacion-costo").innerHTML = mensajePromocion;
-// }
-
-
-// document.getElementById("mensaje-costo").onmouseover = function() {mensajeCostoOver()};
-// document.getElementById("mensaje-costo").onmouseout = function() {mensajeCostoOut()};
 
 /*FUNCION PARA BORRAR PRODUCTOS DEL CARRITO*/
 function borrarUnProducto(parametro){
@@ -177,6 +133,9 @@ $('#compra').click(function(){
   }
 
 });
+
+
+/*MERCADOPAGO*/
 
 
 /*FUNCION PARA MENSAJE VACIO CARRITO*/
